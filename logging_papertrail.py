@@ -1,8 +1,10 @@
 import logging
 from logging.handlers import SysLogHandler
+import os
 
-PAPERTRAIL_HOST = "logs3.papertrailapp.com"
-PAPERTRAIL_PORT = 50813
+
+PAPERTRAIL_HOST = os.environ["PAPERTRAIL_HOST"]
+PAPERTRAIL_PORT = os.environ["PAPERTRAIL_PORT"]
 
 
 def main() -> None:
